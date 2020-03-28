@@ -62,7 +62,7 @@ header{
     margin-left: auto;
  }
 .links a, .links button{
-    font-size: 1.725rem;
+    font-size: 1.25rem;
     font-weight: 400;
     margin: 1rem;
     transition: var(--transition);
@@ -195,6 +195,11 @@ align-items: center;
     .features{
         grid-column: 1/ span 8;
     }
+    .links a, .links button{
+      
+        margin: 5px;
+       
+    }
 }
 
 @media only screen and (max-width:650px){
@@ -209,8 +214,35 @@ align-items: center;
     .icon{
         margin-bottom: 20px;
     }
+
+    .links {
+        margin-top: 13%;
+      margin-right: 10px;
+       display: flex;
+       flex-direction:row;
+       align-self: flex-start;
+       
+      
+      
+       
+    }
+    .links a {
+      
+       margin-top: 5%;
+       margin-left: 4px;
+   
+
+
+    }
+    .features .feature img{
+        height: 130px;
+        width: 120px;
+      
+    }
+
+    .features    {
+       
+       padding-left:38px;
+    }
+
 }
-
-
-
-
