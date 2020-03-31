@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+      
+        <link rel="stylesheet" href="./styles.css">
+
+        <!-- JQuery -->
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        
+        <!-- Tweenmax GASP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+   
+    </head>
+    <body>
+        <div class="navigation-wrapper">
+            <div class="project-preview-wrapper">
+                <div class="project-preview"></div>
+            </div>
+            <ul class="names-list">
+                <li class="names-item">
+                    <a href="#" class="names-link names-link1">
+                        <div class="names-info">
+                        <span data-text="Isadora">Isadora</span>
+                        <p>Ballet Dancer</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li class="names-item">
+                    <a href="#" class="names-link names-link2">
+                        <div class="names-info">
+                        <span data-text="Chris">Chris</span>
+                        <p>Hip Hop Dancer</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li class="names-item">
+                    <a href="#" class="names-link names-link3">
+                        <div class="names-info">
+                        <span data-text="Merce & Kyle">Merce & Kyle</span>
+                        <p>Ballet Dancers</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li class="names-item">
+                    <a href="#" class="names-link names-link4">
+                        <div class="names-info">
+                        <span data-text="Lance">Lance</span>
+                        <p>Street & Hip Hop Dancer</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+
+                <li class="names-item">
+                    <a href="#" class="names-link names-link5">
+                        <div class="names-info">
+                        <span data-text="Audrey">Audrey</span>
+                        <p>Ballet Chreographer & Dancer</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+
+                <li class="names-item">
+                    <a href="#" class="names-link names-link6">
+                        <div class="names-info">
+                        <span data-text="Bruno">Bruno</span>
+                        <p>Break Dancer</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+
+                <li class="names-item">
+                    <a href="#" class="names-link names-link7">
+                        <div class="names-info">
+                        <span data-text="Kate">Kate</span>
+                        <p>Contemporary Dancer & Choreographer</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li class="names-item">
+                    <a href="#" class="names-link names-link8">
+                        <div class="names-info">
+                            <span data-text="Leslie & Kevin">Leslie & Kevin</span>
+                        <p>Tango Dancers</p>
+                        <div class="icons">
+                            <i class="fas fa-award"></i>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-play-circle"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="events-btn">See Our Next Events</button>
+        </div>
+        <div class="progressbar"></div>
+      
+        <script>
+            $(document).ready(function(){
+                TweenMax.set(".project-preview", {width:0});
+                
+                var t1= new TimelineLite();
+                
+                $(document).on("mouseover", ".names-item", function(evt){
+                    t1 = new TimelineLite();
+                    t1.to($(".project-preview"), 1, {
+                        width: "600px",
+                        ease: Expo.easeInOut
+                    });
+
+
+
+                }).on("mouseout", ".names-item", function(evt){
+                    t1 = new TimelineLite();
+                    t1.to($(".project-preview"), 0.5, {
+                        width: 0,
+                        ease: Expo.easeInOut
+                    });
+                });
+
+
+                var button = $(".events-btn");
+                var p = $('p');
+                var icons = $(".icons");
+                
+                TweenLite.to(button, {x:100, repeat:100, duration: 5, ease: "bounce.out"});
+                TweenLite.to(p, {x:100, duration: 2.5, ease: "Expo.easeInOut", repeat:2, scale:1.5, runBackwards:true});
+                TweenLite.fromTo(icons, {opacity: 0}, {opacity: 1,delay:5, duration:2, ease: Expo.easeIn});
+
+            });
+
+            $(".names-link1").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture1.jpg)"})
+            });
+
+            $(".names-link2").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture2.jpg)"})
+            });
+            $(".names-link3").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture3.jpg)"})
+            });
+            $(".names-link4").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture4.jpg)"})
+            });
+            $(".names-link5").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture5.jpg)"})
+            });
+            $(".names-link6").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture6.jpg)"})
+            });
+            $(".names-link7").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture7.jpg)"})
+            });
+            $(".names-link8").hover(function(){
+                $(".project-preview").css({"background-image": "url(./images/picture8.jpg)"})
+            });
+
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh=$(window).height();
+                scrollPercent = (scroll / (dh-wh)) * 100;
+                $(".progressbar").css("height", scrollPercent + "%");
+            });
+
+        </script>
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
