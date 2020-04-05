@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js" integrity="sha256-36hEPcG8mKookfvUVvEqRkpdYV1unP6wvxIqbgdeVhk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+       
+    </head>
+    <body>
+
+        <section class="works">
+            <div class="wrapper-nav">
+                <div class="nav">
+                    <div class="logo"> <img src="./logo.svg" alt=""></div>
+                    <div class="menu-links">
+                        <ul>
+                            <li>Home</li>
+                            <li>News</li>
+                            <li>Music</li>
+                            <li>Videos</li>
+                            <li>Shop</li>
+                        </ul>
+                    </div>
+                    <div class="search"><i class="fas fa-search"></i></div>
+                    <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+            </div>
+        
+            <hr class="border-bottom">
+            <div class="wrapper">
+             
+                <div class="slider-names">
+                    <div class="name">Sneazzy, Nekfeu</div>
+                    <div class="name">Mister V, Dosseh</div>
+                    <div class="name">Marwa Loud,Naza</div>
+                    <div class="name">Larry, RK</div>
+                   
+                </div>
+                <div class="slider-numbers">
+                    <div class="number"><span>01 </span>/04</div>
+                    <div class="number"> <span>02</span> /04</div>
+                    <div class="number"><span>03</span>/04</div>
+                    <div class="number"><span>04</span> /04</div>
+                   
+                </div>
+
+                <div class="slider">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+
+                <div class="slider-description">
+                    <div class="description">
+                        <h3 class="song-name">
+                            ZERO DETAIL
+                        </h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore.</p>
+                        <div class="details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Montreal</span>
+                            <i class="fas fa-heart"></i>
+                            <span>12.5K</span>
+                        </div>
+                    
+                    </div>
+                
+            
+                <div class="description">
+                    <h3 class="song-name">
+                        Gang 
+                    </h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore.</p>
+                    <div class="details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Toulouse</span>
+                        <i class="fas fa-heart"></i>
+                        <span>1.5K</span>
+                    </div>
+                   
+            </div>
+   
+
+
+        
+            <div class="description">
+                <h3 class="song-name">
+                    Woin Woin
+                </h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore.</p>
+                <div class="details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bordeaux</span>
+                    <i class="fas fa-heart"></i>
+                    <span>22.5K</span>
+                </div>
+                </div>
+     
+  
+        <div class="description">
+            <h3 class="song-name">
+               Allez les gros
+            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore.</p>
+            <div class="details">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Algeria</span>
+                <i class="fas fa-heart"></i>
+                <span>4.5M</span>
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+
+
+<h2> <span class="span"></span> Top 4</h2>
+        </section>
+        <script src="" async defer></script>
+        <script>var slides = document.getElementsByClassName("slide");
+            var slidesArray = Array.prototype.filter.call(slides, (el, index) => {
+                return index !== 0;
+            });
+            var currentSlide = 0;
+            
+            TweenLite.set(slidesArray, {left:"100%"});
+            TweenLite.delayedCall(5, nextSlide);
+            
+            function nextSlide() {
+            
+                TweenLite.to(slides[currentSlide], 1, {left:"-100%"} );
+            
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                } else {
+                    currentSlide = 0;
+                }
+            
+                TweenLite.fromTo(slides[currentSlide], 1, {left: "100%"}, {left:"0px"} );
+                TweenLite.delayedCall(5, nextSlide);
+            }
+            
+            var slidesDescription = document.getElementsByClassName("description");
+            var slidesDescriptionArray = Array.prototype.filter.call(slidesDescription, (el, index) => {
+              return index !== 0;
+            });
+            var currentDescription = 0;
+            
+            TweenLite.set(slidesDescriptionArray, {right: "-100%"});
+            TweenLite.delayedCall(5, nextSlideDescription);
+            
+            function nextSlideDescription() {
+            
+                TweenLite.to(slidesDescription[currentDescription], 1, {right: "-100%"});
+            
+                if (currentDescription < slidesDescription.length - 1) {
+                    currentDescription++;
+                } else {
+                    currentDescription = 0;
+                }
+            
+                TweenLite.fromTo(slidesDescription[currentDescription], 1, {right: "100%"}, {right: "0px"} );
+                TweenLite.delayedCall(5, nextSlideDescription);
+            
+
+            //
+            var names = document.getElementsByClassName("name");
+            var namesArray = Array.prototype.filter.call(names, (el, index) => {
+              return index !== 0;
+            });
+            var currentName = 0;
+            
+            TweenLite.set(namesArray, {left:"100%"});
+            TweenLite.delayedCall(5, nextName);
+            
+            function nextName() {
+            
+                TweenLite.to(names[currentName], 1, {left:"-100%"});
+            
+                if (currentName < names.length - 1) {
+                    currentName++;
+                } else {
+                    currentName = 0;
+                }
+            
+                TweenLite.fromTo(names[currentName], 1,{left:"100%"}, {left:"0%"} );
+                TweenLite.delayedCall(5,nextName);
+            }};
+            TweenMax.from(".logo", 1, {
+                delay: 1.2, 
+                opacity: 0,
+                x: -20,
+                ease: Expo.easeInOut
+            });
+
+
+            var numbers = document.getElementsByClassName("number");
+            var numbersArray = Array.prototype.filter.call(numbers, (el, index)=>{
+                return index !==0;
+            });
+
+            var currentNumber = 0;
+
+            TweenLite.set(numbersArray, {left:"100%"});
+            TweenLite.delayedCall(5, nextNum);
+
+            function nextNum(){
+                TweenLite.to(numbers[currentNumber] , 1, {left:"-100%"});
+                if (currentNumber < numbers.length - 1 ){
+                    currentNumber ++;
+                } else{
+                    currentNumber= 0;
+                }
+            
+            TweenLite.fromTo(numbers[currentNumber], 1,{left:"100%"}, {left:"2%"} );
+            TweenLite.delayedCall(5,nextNum);
+            
+            };
+
+ 
+
+</script>
+    </body>
+</html>

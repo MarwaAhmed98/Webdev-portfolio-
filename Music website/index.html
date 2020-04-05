@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js" integrity="sha256-36hEPcG8mKookfvUVvEqRkpdYV1unP6wvxIqbgdeVhk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    </head>
+    <body>
+
+    <div class="overlay first"></div>
+    <div class="overlay second"></div>
+    <div class="overlay third"></div>
+
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo"> <img src="./logo.svg" alt=""></div>
+            <div class="menu-links">
+                <ul>
+                    <li>Magazines</li>
+                    <li>Actualités</li>
+                    <li>Musique</li>
+                    <li>Concerts</li>
+                    <li>Acheter</li>
+                </ul>
+            </div>
+            <div class="search"><i class="fas fa-search"></i></div>
+            <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+        </div>
+    </div>
+
+        <hr class="border-bottom">
+        <div class="content">
+            <div class="text">
+                <p class="subtitle">La Autorité de </p>
+                <h1 class="title">
+                    <span>Hip Hop <br>Culture</span>
+                </h1>
+                <p class="desc">Issy-y est le phénomène culturel entourant  <br>
+                    la culture Hip Hop et Rap.</p>
+                <a class="readmore" href="jamdelasemaine.html">Jam de la semaine</a>
+            </div>
+                <div class="img-1"></div>
+                <div class="slider">
+                    <div class="arrows">
+                        <ul>
+                            <li><i class="fas fa-arrow-left"></i></li>
+                            <li><i class="fas fa-arrow-right"></i></li>
+                        </ul>
+                    </div>
+                    <div class="pages"><span>01</span>/04</div>
+                </div>
+
+                <div class="img-2"></div>
+                <div class="img-3"></div>
+        </div>
+
+     
+    
+        <script>
+
+            TweenMax.from(".logo", 1, {
+                delay: 1.2, 
+                opacity: 0,
+                x: -20,
+                ease: Expo.easeInOut
+            })
+
+
+            TweenMax.staggerFrom(".menu-links ul li", 1, {
+                delay: 1.2, 
+                opacity: 0,
+                x: -20,
+                ease: Expo.easeInOut
+            }, 0.08)
+            TweenMax.to(".first", 1.5, {
+                delay: .2,
+                left: "-100%",
+                ease: Expo.easeInOut
+            })
+            TweenMax.from(".search", 1, {
+                delay: 1.6, 
+                opacity: 0,
+                x: -20,
+                ease: Expo.easeInOut
+            })
+            TweenMax.from(".cart", 1, {
+                delay: 1.8, 
+                opacity: 0,
+                x: -20,
+                ease: Expo.easeInOut
+            })
+
+            TweenMax.to(".border-bottom", 1, {
+                delay: 1.4, 
+                width:'100%',
+                ease: Expo.easeInOut
+            })
+
+            TweenMax.from(".subtitle", 1, {
+                delay: 2.8, 
+                opacity: 0,
+                x: -20,
+                ease: Expo.easeInOut
+            })
+            TweenMax.to(".title", 1, {
+                delay: 2.2, 
+               width: "100%",
+                ease: Expo.easeInOut
+            })
+
+            TweenMax.from(".desc", 1, {
+                delay: 2.8, 
+               opacity: 0,
+               x: -20,
+                ease: Expo.easeInOut
+            })
+            
+            TweenMax.from(".readmore", 1, {
+                delay: 2.8, 
+               opacity: 0,
+               x: -20,
+                ease: Expo.easeInOut
+            })
+  
+            TweenMax.to(".slider", 1, {
+                delay: 3, 
+               opacity: 1,
+                ease: Expo.easeInOut
+            })
+
+            TweenMax.to(".img-1", 1, {
+                delay: 2.2, 
+               width: "450px",
+                ease: Expo.easeInOut
+            })
+            TweenMax.to(".img-2", 1, {
+                delay: 2.2, 
+               width: "300px",
+                ease: Expo.easeInOut
+            })
+            TweenMax.to(".img-3", 1, {
+                delay: 2.2, 
+               width: "300px",
+                ease: Expo.easeInOut
+            })
+
+
+            TweenMax.to(".second", 1.5, {
+                delay: .4,
+                left: "-100%",
+                ease: Expo.easeInOut
+            })
+            TweenMax.to(".third", 1.5, {
+                delay: .6,
+                left: "-100%",
+                ease: Expo.easeInOut
+            })
+        </script>
+       
+        <script src="" async defer></script>
+    </body>
+</html>
